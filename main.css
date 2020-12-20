@@ -1,0 +1,113 @@
+:root{
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --background-gradient: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  --font-fam: 'Kumbh Sans', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: var(--background-gradient);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: var(--font-fam);
+}
+
+.back-div{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  height: 500px;
+  width: 900px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 20px 50px rgb(90, 90, 90);
+}
+.over{
+  overflow: hidden;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.image{
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+.pattern{
+  position: absolute;
+  height: 940px;
+  width: 900px;
+  top: -55%;
+  left: -100%;
+  z-index: 1;
+}
+.woman{
+  height: 370px;
+  position: absolute;
+  z-index: 2;
+  left: -17%;
+}
+.box{
+  height: 130px;
+  position: absolute;
+  left: -18%;
+  top: 46.5%;
+  z-index: 3;
+}
+
+.main-content{
+  margin-right: 50px;
+  height: 100%;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+.heading{
+  margin-bottom: 20px;
+}
+.questions{
+  padding: 10px 10px 10px 0;
+  margin: 5px 10px 10px 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.detail-questions::after{
+  content: url('images/icon-arrow-down.svg');
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transition: all .3s ease-in-out;
+}
+.detail-questions:hover{
+  color: var(--Soft-red);
+  font-weight: 900;
+  transition: all .3s ease-in-out;
+}
+.answers{
+  display: none;
+  font-size: 13px;
+  opacity: .6;
+  margin-top: 20px;
+  line-height: 20px;
+}

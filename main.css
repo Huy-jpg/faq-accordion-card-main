@@ -18,6 +18,8 @@ body{
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: var(--font-fam);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .back-div{
@@ -28,7 +30,7 @@ body{
   align-items: center;
 }
 .main{
-  height: 500px;
+  height: auto;
   width: 900px;
   background-color: white;
   display: grid;
@@ -43,6 +45,7 @@ body{
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .image{
@@ -109,4 +112,8 @@ body{
   opacity: .6;
   margin-top: 20px;
   line-height: 20px;
+}
+
+.active{
+  display: block;
 }

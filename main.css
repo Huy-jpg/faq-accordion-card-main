@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 body{
+  height: 100vh;
+  width: 100vw;
   background: var(--background-gradient);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -80,6 +82,7 @@ body{
   height: stretch;
 }
 .content{
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 90px;
@@ -93,6 +96,16 @@ body{
   cursor: pointer;
   position: relative;
   transition: all .3s ease;
+}
+.questions::after{
+  content: '';
+  background-color: var(--Dark-grayish-blue);
+  position: absolute;
+  opacity: .3;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0
 }
 .detail-questions:hover{
   color: var(--Soft-red);
@@ -118,4 +131,51 @@ body{
 }
 .transition{
   transform: rotate(180deg);
+}
+
+@media (max-width: 375px){
+  body{
+    background: var(--background-gradient);
+  }
+  .pattern, .woman, .box{
+    display: none;
+  }
+  .image{
+    position: absolute;
+    background: url('images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 280px;
+    top: -120px;
+  }
+  .over{
+    background: url('images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    height: 200px;
+    top: 110px;
+    left: 30px;
+  }
+  .main{
+    position: relative;
+    width: 300px;
+    grid-template-columns: none;
+    grid-template-rows: minmax(80px, auto);
+  }
+  .main-content{
+    margin: 20px auto;
+  }
+  .arrow{
+    top: 15px;
+    right: -5%;
+  }
+  .answers{
+    max-width: 200px;
+  }
+  .heading{
+    text-align: center;
+  }
+  .questions{
+    font-size: 12px;
+  }
 }
